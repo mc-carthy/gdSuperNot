@@ -29,6 +29,8 @@ func _input(event):
 func _process(delta):
 	if (Input.is_action_pressed("ui_cancel")):
 		get_tree().quit()
+	if Input.is_action_just_pressed('fire'):
+		$Weapon.fire()
 
 func _physics_process(delta: float) -> void:
 	move(delta)
