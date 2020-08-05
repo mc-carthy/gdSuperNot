@@ -12,7 +12,11 @@ func _physics_process(delta: float) -> void:
 	translation += forward * BULLET_SPEED * delta
 
 func _on_area_entered(area: Area) -> void:
+	if area.has_method('hit'):
+		area.hit(self)
 	queue_free()
 
 func _on_body_entered(body: Node) -> void:
+	if body.has_method('hit'):
+		body.hit(self)
 	queue_free()
