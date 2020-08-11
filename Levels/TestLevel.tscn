@@ -88,3 +88,4 @@ light_color = Color( 0.74902, 0.74902, 0.74902, 1 )
 
 [node name="Enemy" parent="Characters" instance=ExtResource( 3 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -8.06977 )
+playerNode = NodePath("../Player")
